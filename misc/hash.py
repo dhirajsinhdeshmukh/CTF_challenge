@@ -12,7 +12,7 @@ def hash_file(filepath):
         
         print(f"\nHashes for {filepath}:")
         print("-" * 50)
-        print(f"MD5:    {hashlib.md5(data).hexdigest()}")
+        print(f"MD5:    {hashlib.md5(data).hexdigest()}  # For checksums only, not security")
         print(f"SHA1:   {hashlib.sha1(data).hexdigest()}")
         print(f"SHA256: {hashlib.sha256(data).hexdigest()}")
         

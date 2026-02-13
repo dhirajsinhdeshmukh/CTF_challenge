@@ -6,9 +6,7 @@ import subprocess
 
 def disassemble(binary, func=None):
     """Disassemble a binary or specific function"""
-    cmd = ['objdump', '-d', binary]
-    if func:
-        cmd.extend(['-M', 'intel'])
+    cmd = ['objdump', '-d', '-M', 'intel', binary]
     
     try:
         result = subprocess.run(cmd, capture_output=True, text=True)

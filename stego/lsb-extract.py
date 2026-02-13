@@ -27,11 +27,11 @@ def extract_lsb(image_path, output_path=None):
         # Convert bits to bytes
         data = bytearray()
         for i in range(0, len(bits), 8):
-            byte = 0
-            for j in range(8):
-                if i + j < len(bits):
+            if i + 8 <= len(bits):
+                byte = 0
+                for j in range(8):
                     byte = (byte << 1) | bits[i + j]
-            data.append(byte)
+                data.append(byte)
         
         # Try to find printable data
         text = data.decode('latin-1', errors='ignore')

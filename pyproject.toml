@@ -3,7 +3,7 @@ name = "ctf-toolkit"
 version = "0.1.0"
 description = "Minimal CTF toolkit with organized tools and agents"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "requests>=2.31.0",
     "pycryptodome>=3.19.0",

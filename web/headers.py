@@ -11,7 +11,7 @@ def analyze_headers(url):
     
     try:
         req = urllib.request.Request(url)
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             print(f"\nHeaders for {url}:")
             print("-" * 50)
             for header, value in response.headers.items():
