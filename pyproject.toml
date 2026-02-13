@@ -1,0 +1,29 @@
+[project]
+name = "ctf-toolkit"
+version = "0.1.0"
+description = "Minimal CTF toolkit with organized tools and agents"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31.0",
+    "pycryptodome>=3.19.0",
+]
+
+[project.optional-dependencies]
+stego = [
+    "pillow>=10.0.0",
+]
+network = [
+    "scapy>=2.5.0",
+]
+all = [
+    "pillow>=10.0.0",
+    "scapy>=2.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
