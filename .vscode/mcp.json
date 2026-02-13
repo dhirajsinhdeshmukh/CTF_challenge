@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "kali": {
+      "type": "stdio",
+      "command": "mcp-server",
+      "args": [
+        "--server",
+        "http://127.0.0.1:5000"
+      ]
+    }
+  }
+}
